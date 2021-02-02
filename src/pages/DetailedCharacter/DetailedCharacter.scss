@@ -1,0 +1,38 @@
+.DetailedCharacter {
+  &__imageContainer {
+    display: inline-block;
+    margin: 0 48px 0 120px;
+    height: 470px;
+    vertical-align: top;
+  }
+
+  &__image {
+    border-radius: 12px;
+  }
+
+  &__description {
+    display: inline-block;
+    margin-right: 48px;
+    height: 470px;
+  }
+
+  &__infoLabel {
+    color: #9b9cab;
+    margin: 0;
+  }
+
+  &__infoValue {
+    // color: white;
+    margin: 0 0 16px 0;
+  }
+
+  &__mainInfo {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  &__episods {
+    display: inline-block;
+    vertical-align: top;
+  }
+}

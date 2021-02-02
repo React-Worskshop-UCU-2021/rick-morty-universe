@@ -1,0 +1,39 @@
+.Home {
+    text-align: center;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 438px;
+        height: 129px;
+        margin: 0 48px;
+    }
+
+    &__filters {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    &__heroSearch {
+        font-size: 24px;
+    }
+
+    &__resultContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__cardList {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 900px;
+        margin: auto;
+    }
+}
