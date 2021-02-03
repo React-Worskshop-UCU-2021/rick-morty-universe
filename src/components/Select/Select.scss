@@ -1,21 +1,54 @@
 .Select {
-  padding: 17px 24px;
-  background: #f3f7fd;
-  border-radius: 8px;
-  width: 260px;
+    font-size: 24px;
+    padding: 17px 24px;
+    background: var(--background-light);
+    border-radius: 8px;
+    width: 260px;
+    position: relative;
+    &:first-child {
+        margin-right: 40px;
+    }
 
-  &:first-child {
-    margin-right: 40px;
-  }
+    &__label {
+        color: var(--cta);
+        margin-left: 8px;
+    }
 
-  &__label {
-    color: var(--cta);
-  }
+    &__value {
+        color: var(--text-dark);
+    }
 
-  &__value {
-    color: var(--text-dark);
-  }
+    &__selectedOption {
+        position: relative;
+        &::after {
+            display: block;
+            width: 24px;
+            height: 24px;
+            right: 24px;
+            top: calc(50% - 12px);
+            position: absolute;
+            content: '';
+            background: url('../../assets/icons/chevron-down.svg');
+        }
+    }
 
-  &__selectedOption {
-  }
+    &__options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: var(--background-light);
+    }
+
+    &__option {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 8px;
+        list-style-type: none;
+        &:hover {
+            background: var(--cta);
+        }
+    }
 }

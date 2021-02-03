@@ -1,11 +1,16 @@
 .Header {
     height: 120px;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
     display: flex;
-    justify-content: center;
     align-items: center;
 
     &__headerSearch {
+        height: 2px;
+    }
+
+    &__logo {
         height: 56px;
+        width: 190px;
+        padding-left: 120px;
     }
 }

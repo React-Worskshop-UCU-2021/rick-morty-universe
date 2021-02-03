@@ -1,25 +1,44 @@
 import './Card.scss';
-import Photo from '../../assets/icons/image.svg';
 import Tag from '../Tag';
 import { Link } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 
-const Card = () => {
+const Card = ({ id, name, image, status, gender }) => {
     return (
         <div className="Card">
             <div className="Card__imageHolder"> </div>
-            <Link to="/character">
-                <img src={Photo} />
+            <Link to={`character/${id}`}>
+                <img className="Card__image" src={image} />
             </Link>
             <div className="Card__content">
-                <Link to="/character">
-                    <h4 className="Card__name">Lucy</h4>
+                <Link to={`character/${id}`}>
+                    <h4 className="Card__name">{name}</h4>
                 </Link>
                 <div className="Card__tags">
-                    <Tag />
+                    <Tag className="Card__tag">{status}</Tag>
+                    <Tag className="Card__tag">{gender}</Tag>
                 </div>
             </div>
         </div>
     );
+};
+
+Card.propTypes = {
+    name: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    // .oneOf(['unknown', 'alive', 'dead']),
+    gender: PropTypes.string.isRequired,
+    // .oneOf(['male', 'female', 'unknown', 'genderless']),
+    location: PropTypes.shape({
+        url: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+    }),
+    origin: PropTypes.shape({
+        url: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+    }),
+    image: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
 };
 
 export default Card;

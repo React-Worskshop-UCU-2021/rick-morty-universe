@@ -2,9 +2,9 @@
     width: 282px;
     height: 502px;
     border-radius: 12px;
-    background-color: #2A2A42;
+    background-color: #2a2a42;
     margin: 12px;
-    
+
     &__content {
         text-align: center;
         padding: 24px 16px;
@@ -18,5 +18,11 @@
     &__tags {
         display: flex;
         align-items: center;
+    }
+
+    &__image {
+        width: 100%;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
     }
 }
