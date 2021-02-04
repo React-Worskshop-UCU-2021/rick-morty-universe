@@ -1,4 +1,12 @@
 .Hero {
+    &__heading {
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 65px;
+    }
+
     &__logo {
         width: 438px;
         height: 129px;
@@ -6,6 +14,7 @@
     }
 
     &__filters {
+        margin-top: 39px;
         display: flex;
         justify-content: center;
         margin-top: 40px;
@@ -13,11 +22,5 @@
 
     &__search {
         font-size: 24px;
-    }
-
-    &__heading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 }

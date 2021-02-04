@@ -1,4 +1,5 @@
 import './Search.scss';
+import { ReactComponent as LoopImage } from '../../assets/icons/search.svg';
 
 const Search = ({ className, value, setValue }) => {
     // Search App_headerSearch
@@ -8,6 +9,7 @@ const Search = ({ className, value, setValue }) => {
     };
     return (
         <div className={`Search ${className}`}>
+            <LoopImage className="Search__loop" />
             <input
                 className="Search__input"
                 placeholder="search by name"

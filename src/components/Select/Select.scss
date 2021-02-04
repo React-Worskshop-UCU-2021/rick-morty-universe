@@ -8,28 +8,32 @@
     &:first-child {
         margin-right: 40px;
     }
-
+    &:hover {
+        cursor: pointer;
+    }
     &__label {
         color: var(--cta);
         margin-left: 8px;
+        font-size: 18px;
     }
 
     &__value {
         color: var(--text-dark);
+        font-size: 18px;
     }
 
     &__selectedOption {
         position: relative;
-        &::after {
-            display: block;
-            width: 24px;
-            height: 24px;
-            right: 24px;
-            top: calc(50% - 12px);
-            position: absolute;
-            content: '';
-            background: url('../../assets/icons/chevron-down.svg');
-        }
+        // &::after {
+        //     display: block;
+        //     width: 24px;
+        //     height: 24px;
+        //     right: 24px;
+        //     top: calc(50% - 12px);
+        //     position: absolute;
+        //     content: '';
+        //     background: url('../../assets/icons/chevron-down.svg');
+        // }
     }
 
     &__options {
@@ -40,6 +44,7 @@
         padding: 0;
         margin: 0;
         background: var(--background-light);
+        border-radius: 8px;
     }
 
     &__option {

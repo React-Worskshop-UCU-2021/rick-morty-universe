@@ -1,31 +1,51 @@
 .Search {
     position: relative;
-    width: 866px;
+    display: flex;
+    align-items: center;
+
+    width: 60%;
     height: 88px;
     margin: auto;
+    padding: 0 24px 0 24px;
+    box-shadow: 0 -2px 24px 0 #e5e5e5;
+    border-radius: 12px;
 
     &__input {
-        width: 100%;
-        height: 100%;
         display: block;
-        border-radius: 12px;
+
+        // width: 66.9%;
+        padding: 0;
+        height: 100%;
+        margin: 0 16px;
+
         border: none;
-        box-shadow: 0 -2px 24px 0 #e5e5e5;
+        font-size: 24px;
+        outline: none;
     }
 
     &__button {
-        width: 220px;
+        position: absolute;
+        width: 25%;
         height: 71%;
         border: none;
         background: #3f8bfd;
         border-radius: 12px;
-        position: absolute;
         color: white;
         font-weight: bold;
         font-size: 1em;
+        outline: none;
 
         right: 24px;
         top: 50%; /* relative to parent height */
         transform: translateY(-50%); /* relative to element's height */
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__loop {
+        height: 30%;
+        width: auto;
     }
 }

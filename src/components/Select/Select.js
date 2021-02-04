@@ -27,7 +27,7 @@ const Select = ({ label, value, handleSelect, options }) => {
         <div className="Select">
             <div className="Select__selectedOption" onClick={handleIsOpened}>
                 <span className="Select__label">{label}:</span>
-                <span className="Select__value">{selectedOption?.label}</span>
+                <span className="Select__value"> {selectedOption?.label}</span>
             </div>
             {isOpened && (
                 <ul className="Select__options">

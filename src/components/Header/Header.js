@@ -9,7 +9,7 @@ const Header = () => {
             <Link to="/">
                 <Logo className="Header__logo"></Logo>
             </Link>
-            <Search className="Header__headerSearch" />
+            <Search className="Header__search" />
         </div>
     );
 };

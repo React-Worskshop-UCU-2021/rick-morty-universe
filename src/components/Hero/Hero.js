@@ -5,14 +5,14 @@ import { ReactComponent as Logo } from '../../assets/icons/logo.svg';
 import { useState, useEffect } from 'react';
 
 const statusOptions = [
-    { value: '', label: 'all' },
-    { value: 'alive', label: 'alive' },
-    { value: 'dead', label: 'dead' },
+    { value: '', label: 'All Statuses' },
+    { value: 'alive', label: 'Alive' },
+    { value: 'dead', label: 'Dead' },
 ];
 const genderOptions = [
-    { value: '', label: 'all' },
-    { value: 'male', label: 'male' },
-    { value: 'female', label: 'female' },
+    { value: '', label: 'All Genders' },
+    { value: 'male', label: 'Male' },
+    { value: 'female', label: 'Female' },
 ];
 
 const Hero = ({ value, handleSelect }) => {
