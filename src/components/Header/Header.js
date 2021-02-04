@@ -1,7 +1,9 @@
-import './Header.scss';
-import Search from '../Search';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/icons/logo.svg';
+
+import Search from '../Search';
+
+import './Header.scss';
 
 const Header = () => {
     return (

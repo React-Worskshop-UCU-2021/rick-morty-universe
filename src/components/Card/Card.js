@@ -1,7 +1,9 @@
-import './Card.scss';
-import Tag from '../Tag';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
+
+import Tag from '../Tag';
+
+import './Card.scss';
 
 const Card = ({ id, name, image, status, gender }) => {
     return (

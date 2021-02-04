@@ -1,8 +1,10 @@
-import './Hero.scss';
-import Search from '../Search';
-import Select from '../Select';
 import { ReactComponent as Logo } from '../../assets/icons/logo.svg';
 import { useState, useEffect } from 'react';
+
+import Search from '../Search';
+import Select from '../Select';
+
+import './Hero.scss';
 
 const statusOptions = [
     { value: '', label: 'All Statuses' },
@@ -15,14 +17,14 @@ const genderOptions = [
     { value: 'female', label: 'Female' },
 ];
 
-const Hero = ({ value, handleSelect }) => {
-    const [characterName, setCharacterName] = useState('');
-    const [gender, setGender] = useState('');
-    const [status, setStatus] = useState('');
-    // useEffect(() => {
-    //     setValue('Rick');
-    // }, [setValue]);
-
+const Hero = ({
+    characterName,
+    setCharacterName,
+    gender,
+    setGender,
+    status,
+    setStatus,
+}) => {
     return (
         <div className="Hero">
             <h1 className="Hero__heading">
@@ -32,8 +34,8 @@ const Hero = ({ value, handleSelect }) => {
             </h1>
             <Search
                 className="Hero__search"
-                setValue={setCharacterName}
                 value={characterName}
+                setValue={setCharacterName}
             />
             <div className="Hero__filters">
                 <Select

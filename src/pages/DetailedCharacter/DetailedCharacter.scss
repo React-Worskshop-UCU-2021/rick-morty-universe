@@ -1,34 +1,40 @@
 .DetailedCharacter {
+    background: var(--text-dark);
+    padding: 70px 120px;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 40px 40px;
+        background: var(--text-dark-overlayed);
+        border-radius: 12px;
+    }
+
     &__imageContainer {
-        display: inline-block;
-        margin: 0 48px 0 120px;
-        height: 470px;
-        vertical-align: top;
+        width: 23.5%;
+        height: 23.5%;
     }
 
     &__image {
         border-radius: 12px;
+        width: 100%;
+        height: 100%;
     }
 
-    &__description {
-        display: inline-block;
-        margin-right: 48px;
-        height: 470px;
+    &__infoContainer {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    &__descriptionContainer {
     }
 
     &__heading {
+        color: white;
         font-size: 56px;
         margin: 0;
-    }
-
-    &__mainInfo {
-        display: inline-block;
-        margin-right: 20px;
-    }
-
-    &__episodes {
-        display: inline-block;
-        vertical-align: top;
     }
 
     &__tagsContainer {
@@ -36,5 +42,18 @@
         align-items: center;
         gap: 8px;
         margin: 16px 0 33px 0;
+    }
+
+    &__mainInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        gap: 16px;
+    }
+
+    &__episodesContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
     }
 }

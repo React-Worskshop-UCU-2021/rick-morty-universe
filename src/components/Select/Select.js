@@ -1,5 +1,6 @@
-import './Select.scss';
 import { useState } from 'react';
+
+import './Select.scss';
 
 const Select = ({ label, value, handleSelect, options }) => {
     const [isOpened, setIsOpened] = useState(false);

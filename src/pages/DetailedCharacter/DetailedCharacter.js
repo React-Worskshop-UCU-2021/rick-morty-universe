@@ -1,43 +1,74 @@
-import './DetailedCharacter.scss';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
+import { getCharacter } from '../../api';
 import Tag from '../../components/Tag';
 import LabelValueSet from '../../components/LabelValueSet';
 import Label from '../../components/Label';
 import Value from '../../components/Value';
-import { useParams } from 'react-router-dom';
 
-const DetailedCharacter = ({ selectCharacter }) => {
+import './DetailedCharacter.scss';
+
+const DetailedCharacter = () => {
     const { id } = useParams();
-    const character = selectCharacter(Number(id));
-    console.log('character', character);
+
+    const [character, setCharacter] = useState();
+
+    useEffect(() => {
+        loadCharacter(id);
+    }, [id]);
+
+    const loadCharacter = async (id) => {
+        const item = await getCharacter(id);
+        if (item.error) {
+            console.log(item.error);
+        } else {
+            setCharacter(item);
+        }
+    };
+
     const { name, status, gender, species, origin, created, image, episode } =
         character || {};
+    const getEpisodes = character?.episode.map((episode) => (
+        <Value value={episode} key={episode} />
+    ));
 
     return character ? (
         <div className="DetailedCharacter">
-            <div className="DetailedCharacter__imageContainer">
-                <img src={image} className="DetailedCharacter__image" />
-            </div>
-            <div className="DetailedCharacter__description">
-                <h1 className="DetailedCharacter__heading">
-                    #{id} {name}
-                </h1>
-                <div className="DetailedCharacter__tagsContainer">
-                    <Tag children={status} />
-                    <Tag children={gender} />
+            <div className="DetailedCharacter__container">
+                <div className="DetailedCharacter__imageContainer">
+                    <img src={image} className="DetailedCharacter__image" />
                 </div>
-                <div className="DetailedCharacter__mainInfo">
-                    <LabelValueSet label="Species: " value={species} />
-                    <LabelValueSet label="Origin: " value={origin.name} />
-                    <LabelValueSet label="Birthday: " value={created} />
-                    <LabelValueSet label="Last Known location: " value={'hz'} />
-                    <LabelValueSet label="Last Known location:" value={'hz'} />
-                    <LabelValueSet label="First seen in: " value={'hz'} />
-                </div>
-                <div className="DetailedCharacter__episodes">
-                    <Label label="Episodes: " />
-                    {episode.map((episode) => (
-                        <Value value={episode} key={episode} />
-                    ))}
+                <div className="DetailedCharacter__descriptionContainer">
+                    <h1 className="DetailedCharacter__heading">
+                        #{id} {name}
+                    </h1>
+                    <div className="DetailedCharacter__tagsContainer">
+                        <Tag children={status} />
+                        <Tag children={gender} />
+                    </div>
+                    <div className="DetailedCharacter__infoContainer">
+                        <div className="DetailedCharacter__mainInfo">
+                            <LabelValueSet label="Species: " value={species} />
+                            <LabelValueSet
+                                label="Origin: "
+                                value={origin.name}
+                            />
+                            <LabelValueSet label="Birthday: " value={created} />
+                            <LabelValueSet
+                                label="Last Known location: "
+                                value={'hz'}
+                            />
+                            <LabelValueSet
+                                label="First seen in: "
+                                value={'hz'}
+                            />
+                        </div>
+                        <div className="DetailedCharacter__episodesContainer">
+                            <Label label="Episodes: " />
+                            {getEpisodes}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

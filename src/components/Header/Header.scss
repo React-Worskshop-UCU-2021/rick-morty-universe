@@ -1,11 +1,10 @@
 .Header {
     height: 120px;
-    // background-color: antiquewhite;
     display: flex;
     align-items: center;
 
     &__search {
-        height: 2px;
+        height: 56px;
     }
 
     &__logo {

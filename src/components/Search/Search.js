@@ -1,5 +1,6 @@
-import './Search.scss';
 import { ReactComponent as LoopImage } from '../../assets/icons/search.svg';
+
+import './Search.scss';
 
 const Search = ({ className, value, setValue }) => {
     // Search App_headerSearch

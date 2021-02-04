@@ -1,6 +1,7 @@
-import './LabelValueSet.scss';
 import Label from '../Label';
 import Value from '../Value';
+
+import './LabelValueSet.scss';
 
 const LabelValueSet = ({ label, value }) => {
     return (

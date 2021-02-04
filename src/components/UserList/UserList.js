@@ -1,5 +1,6 @@
-import './UserList.scss';
 import Card from '../Card';
+
+import './UserList.scss';
 
 const UserList = ({ characters }) => {
     const renderCharacter = (character) => (
