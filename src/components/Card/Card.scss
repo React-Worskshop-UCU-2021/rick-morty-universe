@@ -1,6 +1,5 @@
 .Card {
     width: 282px;
-    height: 502px;
     border-radius: 12px;
     background-color: #2a2a42;
     margin: 12px;
@@ -9,13 +8,13 @@
         display: flex;
         flex-direction: column;
         justify-content: left;
-        margin: 16px;
+        margin: 24px 16px;
     }
 
     &__name {
         color: white;
         font-size: 24px;
-        margin: 8px 0 8px 0;
+        margin: 0 0 8px 0;
         text-align: left;
     }
 
@@ -23,11 +22,22 @@
         display: flex;
         justify-content: left;
         gap: 8px;
+        margin-bottom: 24px;
     }
 
     &__image {
         width: 100%;
         border-top-right-radius: 12px;
         border-top-left-radius: 12px;
+    }
+
+    &__mainInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__link {
+        text-decoration: none;
     }
 }

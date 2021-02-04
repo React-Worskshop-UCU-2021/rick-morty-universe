@@ -27,9 +27,18 @@ const DetailedCharacter = () => {
         }
     };
 
-    const { name, status, gender, species, origin, created, image, episode } =
-        character || {};
-    const getEpisodes = character?.episode.map((episode) => (
+    const {
+        name,
+        status,
+        gender,
+        species,
+        origin,
+        created,
+        image,
+        episode,
+        location,
+    } = character || {};
+    const getEpisodes = episode?.map((episode) => (
         <Value value={episode} key={episode} />
     ));
 
@@ -57,11 +66,11 @@ const DetailedCharacter = () => {
                             <LabelValueSet label="Birthday: " value={created} />
                             <LabelValueSet
                                 label="Last Known location: "
-                                value={'hz'}
+                                value={location.name}
                             />
                             <LabelValueSet
                                 label="First seen in: "
-                                value={'hz'}
+                                value={origin.name}
                             />
                         </div>
                         <div className="DetailedCharacter__episodesContainer">

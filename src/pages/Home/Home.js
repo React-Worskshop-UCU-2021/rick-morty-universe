@@ -39,9 +39,7 @@ function Home() {
                 status={status}
                 setStatus={setStatus}
             />
-            <div className="Home__resultContainer">
-                <UserList characters={characters} />
-            </div>
+            <UserList characters={characters} />
         </div>
     );
 }

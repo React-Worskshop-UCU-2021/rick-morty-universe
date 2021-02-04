@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
 import Tag from '../Tag';
+import LabelValueSet from '../LabelValueSet';
 
 import './Card.scss';
 
-const Card = ({ id, name, image, status, gender }) => {
+const Card = ({ id, name, image, status, gender, location, origin }) => {
     return (
         <div className="Card">
             <div className="Card__imageHolder"> </div>
@@ -13,12 +14,22 @@ const Card = ({ id, name, image, status, gender }) => {
                 <img className="Card__image" src={image} />
             </Link>
             <div className="Card__content">
-                <Link to={`character/${id}`}>
+                <Link className="Card__link" to={`character/${id}`}>
                     <h4 className="Card__name">{name}</h4>
                 </Link>
                 <div className="Card__tags">
                     <Tag className="Card__tag">{status}</Tag>
                     <Tag className="Card__tag">{gender}</Tag>
+                </div>
+                <div className="DetailedCharacter__mainInfo">
+                    <LabelValueSet
+                        label="Last Known location: "
+                        value={location.name}
+                    />
+                    <LabelValueSet
+                        label="First seen in: "
+                        value={origin.name}
+                    />
                 </div>
             </div>
         </div>

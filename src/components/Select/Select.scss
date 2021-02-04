@@ -15,11 +15,13 @@
         color: var(--cta);
         margin-left: 8px;
         font-size: 18px;
+        font-weight: bold;
     }
 
     &__value {
         color: var(--text-dark);
         font-size: 18px;
+        font-weight: bold;
     }
 
     &__selectedOption {
@@ -52,6 +54,9 @@
         line-height: 40px;
         padding: 0 8px;
         list-style-type: none;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
         &:hover {
             background: var(--cta);
         }
