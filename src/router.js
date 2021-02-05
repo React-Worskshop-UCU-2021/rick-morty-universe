@@ -1,8 +1,8 @@
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+
 import Header from './components/Header';
 import DetailedCharacter from './pages/DetailedCharacter';
 import Home from './pages/Home';
-// import characters from './assets/json/stubCharacters.json';
 
 const Router = () => {
     return (

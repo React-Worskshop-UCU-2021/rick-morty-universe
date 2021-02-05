@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
+
 import { ReactComponent as Arrow } from '../../assets/icons/chevron-down.svg';
 
 import './Select.scss';
@@ -43,6 +45,13 @@ const Select = ({ label, value, handleSelect, options }) => {
             )}
         </div>
     );
+};
+
+Select.propTypes = {
+    label: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    handleSelect: PropTypes.func.isRequired,
+    options: PropTypes.array.isRequired,
 };
 
 export default Select;

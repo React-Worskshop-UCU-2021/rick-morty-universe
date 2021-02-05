@@ -1,3 +1,5 @@
+import { PropTypes } from 'prop-types';
+
 import Label from '../Label';
 import Value from '../Value';
 
@@ -10,6 +12,11 @@ const LabelValueSet = ({ label, value }) => {
             <Value value={value} />
         </div>
     );
+};
+
+LabelValueSet.propTypes = {
+    label: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
 };
 
 export default LabelValueSet;

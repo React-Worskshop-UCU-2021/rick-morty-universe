@@ -38,6 +38,7 @@ const DetailedCharacter = () => {
         episode,
         location,
     } = character || {};
+
     const getEpisodes = episode?.map((episode) => (
         <Value value={episode} key={episode} />
     ));

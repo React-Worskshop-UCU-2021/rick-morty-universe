@@ -1,5 +1,5 @@
 import { ReactComponent as Logo } from '../../assets/icons/logo.svg';
-import { useState, useEffect } from 'react';
+import { PropTypes } from 'prop-types';
 
 import Search from '../Search';
 import Select from '../Select';
@@ -53,6 +53,17 @@ const Hero = ({
             </div>
         </div>
     );
+};
+
+Hero.propTypes = {
+    characterName: PropTypes.string.isRequired,
+    setCharacterName: PropTypes.func.isRequired,
+
+    gender: PropTypes.string.isRequired,
+    setGender: PropTypes.func.isRequired,
+
+    status: PropTypes.string.isRequired,
+    setStatus: PropTypes.func.isRequired,
 };
 
 export default Hero;

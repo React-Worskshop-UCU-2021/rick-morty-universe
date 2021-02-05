@@ -1,0 +1,42 @@
+.Pagination {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+
+    &__page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background: var(--text-dark-overlayed);
+        color: white;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 18px;
+    }
+
+    &__page:last-of-type {
+        margin-right: 0;
+    }
+
+    &__page_active {
+        background: white;
+        color: var(--text-dark);
+    }
+
+    &__arrow {
+        height: 12px;
+        width: 12px;
+        transform: rotate(180deg);
+        content: url('../../assets/icons/arrow.svg');
+    }
+
+    &__arrow_next {
+        transform: rotate(360deg);
+    }
+}

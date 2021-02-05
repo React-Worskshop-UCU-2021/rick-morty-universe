@@ -1,3 +1,5 @@
+import { PropTypes } from 'prop-types';
+
 import { ReactComponent as LoopImage } from '../../assets/icons/search.svg';
 
 import './Search.scss';
@@ -20,6 +22,12 @@ const Search = ({ className, value, setValue }) => {
             <button className="Search__button">Find Character</button>
         </div>
     );
+};
+
+Search.propTypes = {
+    className: PropTypes.string,
+    value: PropTypes.string,
+    setValue: PropTypes.func,
 };
 
 export default Search;

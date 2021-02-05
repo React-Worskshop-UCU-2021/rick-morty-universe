@@ -38,10 +38,9 @@ const Card = ({ id, name, image, status, gender, location, origin }) => {
 
 Card.propTypes = {
     name: PropTypes.string.isRequired,
-    status: PropTypes.string.isRequired,
-    // .oneOf(['unknown', 'alive', 'dead']),
-    gender: PropTypes.string.isRequired,
-    // .oneOf(['male', 'female', 'unknown', 'genderless']),
+    status: PropTypes.oneOf(['Alive', 'Dead', 'unknown']).isRequired,
+    gender: PropTypes.oneOf(['Male', 'Female', 'unknown', 'Genderless'])
+        .isRequired,
     location: PropTypes.shape({
         url: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
