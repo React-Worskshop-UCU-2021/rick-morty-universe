@@ -3,7 +3,6 @@
     padding: 17px 24px;
     background: var(--background-light);
     border-radius: 8px;
-    width: 260px;
     position: relative;
     &:first-child {
         margin-right: 40px;
@@ -25,17 +24,9 @@
     }
 
     &__selectedOption {
-        position: relative;
-        // &::after {
-        //     display: block;
-        //     width: 24px;
-        //     height: 24px;
-        //     right: 24px;
-        //     top: calc(50% - 12px);
-        //     position: absolute;
-        //     content: '';
-        //     background: url('../../assets/icons/chevron-down.svg');
-        // }
+        display: flex;
+        align-items: center;
+        gap: 30px;
     }
 
     &__options {

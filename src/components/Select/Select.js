@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ReactComponent as Arrow } from '../../assets/icons/chevron-down.svg';
 
 import './Select.scss';
 
@@ -27,8 +28,13 @@ const Select = ({ label, value, handleSelect, options }) => {
     return (
         <div className="Select">
             <div className="Select__selectedOption" onClick={handleIsOpened}>
-                <span className="Select__label">{label}:</span>
-                <span className="Select__value"> {selectedOption?.label}</span>
+                <div>
+                    <span className="Select__label">{label}: </span>
+                    <span className="Select__value">
+                        {selectedOption?.label}
+                    </span>
+                </div>
+                <Arrow />
             </div>
             {isOpened && (
                 <ul className="Select__options">
