@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 import { getCharacter } from '../../api';
 import Tag from '../../components/Tag';
@@ -46,7 +46,12 @@ const DetailedCharacter = () => {
     return character ? (
         <div className="DetailedCharacter">
             <div className="DetailedCharacter__navigationContainer">
-                <Label label="Home" />
+                <Link to="/" className="DetailedCharacter__homeLink">
+                    <Label
+                        className="DetailedCharacter__homeLabel"
+                        label="Home"
+                    />
+                </Link>
                 <Label label="|" />
                 <Label label={`#${id} ${name}`} />
             </div>

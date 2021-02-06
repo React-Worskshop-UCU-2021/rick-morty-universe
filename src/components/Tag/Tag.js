@@ -7,7 +7,7 @@ const Tag = ({ children }) => {
 };
 
 Tag.propTypes = {
-    value: PropTypes.string.isRequired,
+    value: PropTypes.string,
 };
 
 export default Tag;

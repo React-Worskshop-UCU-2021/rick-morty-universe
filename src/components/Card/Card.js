@@ -18,8 +18,8 @@ const Card = ({ id, name, image, status, gender, location, origin }) => {
                     <h4 className="Card__name">{name}</h4>
                 </Link>
                 <div className="Card__tags">
-                    <Tag className="Card__tag">{status}</Tag>
-                    <Tag className="Card__tag">{gender}</Tag>
+                    <Tag className="Card__tag" children={status}></Tag>
+                    <Tag className="Card__tag" children={gender}></Tag>
                 </div>
                 <div className="DetailedCharacter__mainInfo">
                     <LabelValueSet

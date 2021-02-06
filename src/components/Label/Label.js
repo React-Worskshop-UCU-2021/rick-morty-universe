@@ -1,12 +1,13 @@
-import { PropTypes } from 'prop-types';
+import { PropTypes } from "prop-types";
 
-import './Label.scss';
+import "./Label.scss";
 
-const Label = ({ label }) => {
-    return <p className="Label">{label}</p>;
+const Label = ({ className, label }) => {
+    return <p className={`Label ${className}`}>{label}</p>;
 };
 
 Label.propTypes = {
+    className: PropTypes.string,
     label: PropTypes.string.isRequired,
 };
 

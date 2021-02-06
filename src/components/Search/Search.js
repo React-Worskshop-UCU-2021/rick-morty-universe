@@ -1,12 +1,10 @@
-import { PropTypes } from 'prop-types';
+import { PropTypes } from "prop-types";
 
-import { ReactComponent as LoopImage } from '../../assets/icons/search.svg';
+import { ReactComponent as LoopImage } from "../../assets/icons/search.svg";
 
-import './Search.scss';
+import "./Search.scss";
 
 const Search = ({ className, value, setValue }) => {
-    // Search App_headerSearch
-    // Search App_heroSearch
     const handleChange = ({ target: { value } }) => {
         setValue(value);
     };

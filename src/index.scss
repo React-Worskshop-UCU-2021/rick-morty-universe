@@ -6,16 +6,17 @@
     --text-gray: #9b9cab;
     --text-dark-overlayed: #2a2a42;
     --background-light: #f3f7fd;
+    --app-blue: #3f8bfd;
 }
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }

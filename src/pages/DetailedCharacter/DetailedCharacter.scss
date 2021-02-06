@@ -64,4 +64,12 @@
         flex-direction: column;
         gap: 3px;
     }
+
+    &__homeLabel {
+        color: var(--app-blue);
+    }
+
+    &__homeLink {
+        text-decoration: none;
+    }
 }
