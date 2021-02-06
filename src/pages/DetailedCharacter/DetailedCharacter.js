@@ -45,6 +45,12 @@ const DetailedCharacter = () => {
 
     return character ? (
         <div className="DetailedCharacter">
+            <div className="DetailedCharacter__navigationContainer">
+                <Label label="Home" />
+                <Label label="|" />
+                <Label label={`#${id} ${name}`} />
+            </div>
+
             <div className="DetailedCharacter__container">
                 <div className="DetailedCharacter__imageContainer">
                     <img src={image} className="DetailedCharacter__image" />

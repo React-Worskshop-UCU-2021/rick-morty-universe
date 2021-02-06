@@ -1,6 +1,17 @@
 .DetailedCharacter {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
     background: var(--text-dark);
-    padding: 70px 120px;
+    padding: 24px 120px 70px 120px;
+
+    &__navigationContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
 
     &__container {
         display: flex;
