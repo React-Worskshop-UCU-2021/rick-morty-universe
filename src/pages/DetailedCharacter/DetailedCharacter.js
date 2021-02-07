@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 
 import { getCharacter } from '../../api';
 import Tag from '../../components/Tag';
@@ -39,19 +39,26 @@ const DetailedCharacter = () => {
         location,
     } = character || {};
 
-    const getEpisodes = episode?.map((episode) => (
-        <Value value={episode} key={episode} />
+    const renderEpisodes = episode?.map((episode) => (
+        <NavLink
+            className="DetailedCharacter__link"
+            exact
+            to={`/episode/${id}`}
+            key={episode}
+        >
+            <Value value={episode} />
+        </NavLink>
     ));
 
     return character ? (
         <div className="DetailedCharacter">
             <div className="DetailedCharacter__navigationContainer">
-                <Link to="/" className="DetailedCharacter__homeLink">
+                <NavLink exact to="/" className="DetailedCharacter__link">
                     <Label
                         className="DetailedCharacter__homeLabel"
                         label="Home"
                     />
-                </Link>
+                </NavLink>
                 <Label label="|" />
                 <Label label={`#${id} ${name}`} />
             </div>
@@ -87,7 +94,7 @@ const DetailedCharacter = () => {
                         </div>
                         <div className="DetailedCharacter__episodesContainer">
                             <Label label="Episodes: " />
-                            {getEpisodes}
+                            {renderEpisodes}
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 .Search {
-    position: relative;
     display: flex;
     align-items: center;
+    gap: 16px;
 
     width: 60%;
     height: 88px;
@@ -11,12 +11,9 @@
     border-radius: 12px;
 
     &__input {
-        display: block;
-
-        // width: 66.9%;
+        width: 66.9%;
         padding: 0;
         height: 100%;
-        margin: 0 16px;
 
         border: none;
         font-size: 24px;
@@ -24,9 +21,10 @@
     }
 
     &__button {
-        position: absolute;
         width: 25%;
         height: 71%;
+        padding: 0;
+
         border: none;
         background: #3f8bfd;
         border-radius: 12px;
@@ -34,10 +32,6 @@
         font-weight: bold;
         font-size: 1em;
         outline: none;
-
-        right: 24px;
-        top: 50%; /* relative to parent height */
-        transform: translateY(-50%); /* relative to element's height */
 
         &:hover {
             cursor: pointer;
