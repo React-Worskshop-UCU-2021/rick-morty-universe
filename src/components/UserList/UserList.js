@@ -58,8 +58,8 @@ const UserList = ({ gender, status, name }) => {
 
 UserList.propTypes = {
     name: PropTypes.string.isRequired,
-    status: PropTypes.oneOf(['Alive', 'Dead', 'unknown', '']).isRequired,
-    gender: PropTypes.oneOf(['Male', 'Female', 'unknown', 'Genderless', ''])
+    status: PropTypes.oneOf(['alive', 'dead', 'unknown', '']).isRequired,
+    gender: PropTypes.oneOf(['male', 'female', 'unknown', 'genderless', ''])
         .isRequired,
 };
 
