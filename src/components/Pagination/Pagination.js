@@ -5,6 +5,7 @@ import _ from 'lodash';
 import './Pagination.scss';
 
 const Pagination = ({ pages, setCurrentPage, currentPage }) => {
+    // TODO: remove unused parts in the code. Keep your code as shorter and cleaner as possible
     const setPagesArray = _(Array(pages))
         .fill(null)
         .map((el, ind) => ind)

@@ -9,6 +9,7 @@ const Header = () => {
     return (
         <div className="Header">
             <Link to="/">
+                {/*TODO: If you have empty tag, you can write it <Logo />*/}
                 <Logo className="Header__logo"></Logo>
             </Link>
             <Search className="Header__search" />

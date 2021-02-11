@@ -8,9 +8,11 @@ const Search = ({ className, value, setValue }) => {
     const handleChange = ({ target: { value } }) => {
         setValue(value);
     };
+
     return (
         <div className={`Search ${className}`}>
             <LoopImage className="Search__loop" />
+            {/*TODO: empty tag, collapse it*/}
             <input
                 className="Search__input"
                 placeholder="search by name"

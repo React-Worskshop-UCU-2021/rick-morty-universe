@@ -2,6 +2,7 @@ import { SERVER_URL } from '../utils';
 
 export const getCharacters = async (page = 1, params) => {
     const searchParams = new URLSearchParams(params);
+    // TODO: remove console logs (eslint rule)
     console.log(
         `${SERVER_URL}/character?page=${page}&${searchParams.toString()}`
     );

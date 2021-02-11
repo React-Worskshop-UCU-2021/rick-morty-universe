@@ -6,6 +6,9 @@ import Select from '../Select';
 
 import './Hero.scss';
 
+// TODO: reorder imports (absolute first - packages, relative last - your files)
+// eslint could auto fix it, but you don't have it ;(
+
 const statusOptions = [
     { value: '', label: 'All Statuses' },
     { value: 'alive', label: 'Alive' },

@@ -10,6 +10,8 @@ import './UserList.scss';
 const UserList = ({ gender, status, name }) => {
     const [currentPage, setCurrentPage] = useState(0);
     const [pages, setPages] = useState(0);
+
+    // TODO: do smth with this, it's unused so far
     const [isLoading, setIsLoading] = useState(false);
 
     const [characters, setCharacters] = useState();

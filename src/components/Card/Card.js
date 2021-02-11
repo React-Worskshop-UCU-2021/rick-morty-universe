@@ -18,6 +18,7 @@ const Card = ({ id, name, image, status, gender, location, origin }) => {
                     <h4 className="Card__name">{name}</h4>
                 </Link>
                 <div className="Card__tags">
+                    {/*TODO: empty tags, collapse it*/}
                     <Tag className="Card__tag" children={status}></Tag>
                     <Tag className="Card__tag" children={gender}></Tag>
                 </div>
